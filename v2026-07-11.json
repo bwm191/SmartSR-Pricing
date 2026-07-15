@@ -1,0 +1,33 @@
+{
+  "schema_version": "smartsr.pricing-registry.v1",
+  "registry_version": "2026-07-11",
+  "published_at": "2026-07-11T00:00:00Z",
+  "currency": "CNY",
+  "models": [
+    {
+      "provider": "deepseek",
+      "model": "deepseek-v4-flash",
+      "aliases": ["deepseek-chat"],
+      "base_url": "https://api.deepseek.com",
+      "deployment_scope": "official-api",
+      "input_per_1m": 1.0,
+      "output_per_1m": 2.0,
+      "input_basis": "cache_miss",
+      "source_url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+      "checked_at": "2026-07-11",
+      "alias_deprecated_after": {"deepseek-chat": "2026-07-24T15:59:00Z"}
+    },
+    {
+      "provider": "qwen",
+      "model": "qwen-max",
+      "aliases": [],
+      "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+      "deployment_scope": "china-mainland",
+      "input_per_1m": 2.4,
+      "output_per_1m": 9.6,
+      "input_basis": "standard-realtime",
+      "source_url": "https://help.aliyun.com/en/model-studio/model-pricing",
+      "checked_at": "2026-07-11"
+    }
+  ]
+}
