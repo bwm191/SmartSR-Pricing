@@ -1,0 +1,114 @@
+{
+  "schema_version": "smartsr.pricing-registry.v1",
+  "registry_version": "2026-11-24",
+  "published_at": "2026-11-24T00:00:00Z",
+  "currency": "USD",
+  "models": [
+    {
+      "provider": "deepseek",
+      "model": "deepseek-flash",
+      "aliases": [
+        "deepseek-v4-flash"
+      ],
+      "base_url": "https://api.deepseek.com",
+      "deployment_scope": "official-api",
+      "input_per_1m": 0.3,
+      "output_per_1m": 1.2,
+      "input_basis": "cache_miss_peak; conservative upper-bound for Core flat-rate accounting",
+      "source_url": "https://api-docs.deepseek.com/quick_start/pricing/",
+      "checked_at": "2026-11-24",
+      "pricing_details": {
+        "peak": {
+          "input_cache_hit_per_1m": 0.006,
+          "input_cache_miss_per_1m": 0.3,
+          "output_per_1m": 1.2
+        },
+        "off_peak": {
+          "input_cache_hit_per_1m": 0.003,
+          "input_cache_miss_per_1m": 0.15,
+          "output_per_1m": 0.6
+        },
+        "peak_hours_utc": "01:00-04:00 and 06:00-10:00 Monday-Friday, excluding Chinese public holidays",
+        "model_version": "DeepSeek-V4.1-Flash-1017",
+        "legacy_alias_note": "deepseek-v4-flash remains accepted but is served by DeepSeek-V4.1-Flash-1017"
+      }
+    },
+    {
+      "provider": "deepseek",
+      "model": "deepseek-flash",
+      "aliases": [
+        "deepseek-v4-flash"
+      ],
+      "base_url": "https://api.deepseek.com/v1",
+      "deployment_scope": "official-api",
+      "input_per_1m": 0.3,
+      "output_per_1m": 1.2,
+      "input_basis": "cache_miss_peak; conservative upper-bound for Core flat-rate accounting",
+      "source_url": "https://api-docs.deepseek.com/quick_start/pricing/",
+      "checked_at": "2026-11-24",
+      "pricing_details": {
+        "peak": {
+          "input_cache_hit_per_1m": 0.006,
+          "input_cache_miss_per_1m": 0.3,
+          "output_per_1m": 1.2
+        },
+        "off_peak": {
+          "input_cache_hit_per_1m": 0.003,
+          "input_cache_miss_per_1m": 0.15,
+          "output_per_1m": 0.6
+        },
+        "peak_hours_utc": "01:00-04:00 and 06:00-10:00 Monday-Friday, excluding Chinese public holidays",
+        "model_version": "DeepSeek-V4.1-Flash-1017",
+        "legacy_alias_note": "deepseek-v4-flash remains accepted but is served by DeepSeek-V4.1-Flash-1017"
+      }
+    },
+    {
+      "provider": "qwen",
+      "model": "qwen3.7-flash",
+      "aliases": [
+        "qwen3.7-flash-2026-07-15"
+      ],
+      "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+      "deployment_scope": "china-beijing",
+      "input_per_1m": 0.028,
+      "output_per_1m": 0.11,
+      "input_basis": "standard_realtime; 0-32K input tier; no batch or cache discount",
+      "source_url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+      "checked_at": "2026-11-24",
+      "tiered_rates_per_1m": [
+        {
+          "max_input_tokens": 32000,
+          "input": 0.028,
+          "output": 0.11
+        },
+        {
+          "max_input_tokens": 256000,
+          "input": 0.083,
+          "output": 0.33
+        },
+        {
+          "max_input_tokens": 1000000,
+          "input": 0.165,
+          "output": 0.66
+        }
+      ],
+      "pricing_notes": "Core v0.3.1 currently applies one flat rate per model; the top-level rate therefore represents the 0-32K tier. Requests above 32K are billed at higher tiers and are not yet reflected in Core's calculated cost."
+    },
+    {
+      "provider": "qwen",
+      "model": "qwen3.7-max",
+      "aliases": [
+        "qwen3.7-max-2026-05-20",
+        "qwen3.7-max-2026-06-08"
+      ],
+      "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+      "deployment_scope": "china-beijing",
+      "input_per_1m": 1.65,
+      "output_per_1m": 4.951,
+      "input_basis": "standard_realtime; list price; cache discount not applied",
+      "source_url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+      "checked_at": "2026-11-24",
+      "pricing_notes": "Retained as an existing generic registry entry for compatibility; this does not mean Qwen3.7 Max has been selected for CSRCT-HF."
+    }
+  ]
+}
