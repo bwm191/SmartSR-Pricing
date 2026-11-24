@@ -1,6 +1,6 @@
 {
   "schema_version": "smartsr.pricing-index.v1",
-  "latest_version": "2026-07-15",
+  "latest_version": "2026-11-24",
   "versions": {
     "2026-07-11": {
       "path": "v2026-07-11.json",
@@ -9,6 +9,10 @@
     "2026-07-15": {
       "path": "v2026-07-15.json",
       "sha256": "736deef6150b94df41b8bb307849d3839fe2a10a7cf926459d446928afef697a"
+    },
+    "2026-11-24": {
+      "path": "v2026-11-24.json",
+      "sha256": "75895b08a58eb231628673728c0e578302c4989c6963ae504f23ea4cae05b5e1"
     }
   }
 }
